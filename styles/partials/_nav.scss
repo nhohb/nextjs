@@ -1,0 +1,48 @@
+header {
+  .navbar {
+    position: relative;
+    padding: 0.5rem 1rem;
+    background-color: white;
+    height: rem(80);
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      color: $text-color-black-1;
+      margin-right: rem(40);
+      @include font("Roboto", 700, rem(40), rem(20), rem(0.2));
+    }
+  
+    .navbar-nav {
+      .nav-link {
+        color: $text-color-black-1;
+        padding-left: rem(24);
+        padding-right: rem(24);
+        @include font("Roboto", 700, rem(16), rem(18), rem(0.2));
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  
+    .nav-search {
+      display: flex;
+      align-items: center;
+      flex-grow: 1;
+      
+      input {
+        margin-right: rem(3);
+        max-width: rem(400);
+      }
+
+      button {
+        max-height: rem(40);
+      }
+    }
+
+    .mr-auto {
+      margin-right: auto;
+    }
+  }
+}
