@@ -6,7 +6,7 @@ const Home = () => {
 };
 
 Home.getLayout = function getLayout(page: JSX.Element) {
-  return <Layout>{page}</Layout>;
+  return <Layout title='Home'>{page}</Layout>;
 };
 
 export default Home;
