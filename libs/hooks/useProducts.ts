@@ -1,5 +1,6 @@
 import { productFetcher } from 'libs/axios-fetcher';
-import { DEFAULT_PAGE_SIZE } from 'libs/constants';
+import { apiEndpoints } from 'libs/constants/apiEndpoints';
+import { DEFAULT_PAGE_SIZE } from 'libs/constants/commons';
 import useSWR from 'swr';
 import { ProductFilter, ProductType } from 'types/product';
 
@@ -15,7 +16,7 @@ function formatUrl(filter: ProductFilter, pageIndex?: number, pageSize: number =
   pageIndex && params.push(`offset=${pageIndex * pageSize}`);
   pageSize && params.push(`limit=${pageSize}`);
 
-  return '/products?' + params.join('&');
+  return apiEndpoints.PRODUCT_LIST + '?' + params.join('&');
 }
 
 function useProducts(

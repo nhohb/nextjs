@@ -3,7 +3,7 @@ import 'styles/index.scss';
 import { Page } from 'types/page';
 import { SWRConfig } from 'swr';
 import { defaultFetcher } from 'libs/axios-fetcher';
-import { DEFAULT_SWR_FETCH_INTERVAL } from 'libs/constants';
+import { DEFAULT_SWR_FETCH_INTERVAL } from 'libs/constants/commons';
 
 type Props = AppProps & {
   Component: Page;

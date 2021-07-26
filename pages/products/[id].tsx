@@ -9,14 +9,13 @@ import { ProductVariantType } from 'types/product';
 
 function ProductDetail() {
   const router = useRouter();
-  const { id, storeId } = router.query;
+  const { id } = router.query;
 
   const [selectedVariant, setSelectedVariant] = useState<ProductVariantType>();
 
   const productId = Array.isArray(id) ? id[0] : id || '';
-  const currentStoreId = Array.isArray(storeId) ? storeId[0] : storeId || '';
 
-  const { product, isLoading } = useProductDetail(productId, currentStoreId);
+  const { product, isLoading } = useProductDetail(productId);
 
   useEffect(() => {
     setSelectedVariant(product?.variants[0]);
